@@ -595,8 +595,8 @@ function drawEndScrollPage() {
     // Draw the text at the current scroll position
     let yPos = -endScrollPos;
     fill(255);
-    textSize(16);
-    text(endTextContent, 40, yPos);
+    textSize(15);
+    text(endTextContent, 30, yPos);
   
     // Update scroll position
     endScrollPos += endScrollSpeed;
