@@ -255,10 +255,16 @@ function preload() {
   endBackgroundImage = loadImage('throne room.png');
   // Load the popup image
   popupImage = loadImage('You Won!.png');
+// Load the main menu music
+  mainMenuMusic = loadSound("mainMenuMusic.mp3");
 }
 
 function setup() {
     createCanvas(600, 600);
+    // Play the main menu music
+    mainMenuMusic.setVolume(0.05);
+    mainMenuMusic.loop();
+    
     textSize(16);
 
     // Set the custom font
