@@ -1,10 +1,10 @@
 let button1Image;
 let button2Image;
-let backgroundImage;
+let loseBackgroundImage;
 
 function preload() {
   // own images for buttons and background
-  backgroundImage = loadImage('gameover.png');
+  loseBackgroundImage = loadImage('gameover.png');
   button1Image = loadImage('playagain.jpeg');
   button2Image = loadImage('mainmenu.jpeg');
 }
@@ -13,7 +13,7 @@ function setup() {
   createCanvas(600, 600);
 
   //  background image
-  image(backgroundImage, 0, 0, width, height);
+  image(loseBackgroundImage, 0, 0, width, height);
 
   // button with image
   let button1 = createImg('playagain.jpeg');
@@ -28,9 +28,6 @@ function setup() {
   button2.mousePressed(button2Clicked);
 }
 
-function draw() {
-  // no drawing needed
-}
 
 function button1Clicked() {
   // redirect to game page to play again
