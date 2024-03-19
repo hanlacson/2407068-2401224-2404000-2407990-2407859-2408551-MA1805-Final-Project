@@ -28,6 +28,9 @@ function setup() {
   button2.mousePressed(button2Clicked);
 }
 
+function drawGameOver() {
+  
+}
 
 function button1Clicked() {
   // redirect to game page to play again
