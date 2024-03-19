@@ -12,6 +12,10 @@ function preload() {
 function setup() {
   createCanvas(600, 600);
 
+  drawGameOver();
+}
+
+function drawGameOver() {
   //  background image
   image(loseBackgroundImage, 0, 0, width, height);
 
@@ -26,10 +30,6 @@ function setup() {
   button2.position(380, 300);
   button2.size(150, 150); //  size of button
   button2.mousePressed(button2Clicked);
-}
-
-function drawGameOver() {
-  
 }
 
 function button1Clicked() {
