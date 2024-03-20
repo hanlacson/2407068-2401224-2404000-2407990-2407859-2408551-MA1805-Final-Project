@@ -27,7 +27,7 @@ The code I have contributed is initialising the tilemap variables alongside the 
 
 The issues I was able to fix were the positioning of the scrollpage text to be aligned to the centre so it was completely visible; the player was not moving when we first merged the player code and I was able to fix this issue within the keyPressed function. I also fixed an issue with linking the end scroll page and the crown. I had also adjusted the tileSize and Canvas size to fix the proportions of the graphic/ images shown. 
 
-An issue I was not able to resolve was coding the two next level maps of the game. I attempted to do the transitions between rooms within my branch (Han-branch), however it would not work when opening up onto the live server. I had tried looking at the console and the example on gitHub but it came up with the same issue - the lexical declaration 'currentLevel' cannot be accessed before initialisation. I was unsure what to do to fix this in my code. 
+An issue I was not able to resolve was coding the two next level maps of the game. I attempted to do the transitions between rooms within my branch (Han-File), however it would not work when opening up onto the live server. I had tried looking at the console and the example on gitHub but it came up with the same issue - the lexical declaration 'currentLevel' cannot be accessed before initialisation. I was unsure what to do to fix this in my code. 
 
 Overall, I enjoyed fixing issues with the main code and organising our folders as it was very satisfying to tidy up and reslove our code to work together for the game. 
 
