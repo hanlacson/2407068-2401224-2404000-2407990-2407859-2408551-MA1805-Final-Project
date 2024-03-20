@@ -18,7 +18,7 @@ function setup() {
 }
 
 function draw() {
-  // background color to black
+  // background color to transparent
   background (255,0,0,0);
   // update sprite's position
   sprite.update();
