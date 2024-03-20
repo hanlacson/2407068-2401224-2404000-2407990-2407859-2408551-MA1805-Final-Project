@@ -255,9 +255,9 @@ function preload() {
   // Load the custom font
   endCustomFont = loadFont('assets/MinecraftRegular-Bmg3.otf');
   // Load the background image
-  endBackgroundImage = loadImage('throne room.png');
+  endBackgroundImage = loadImage('YouWon/throne room.png');
   // Load the popup image
-  popupImage = loadImage('You Won!.png');
+  popupImage = loadImage('YouWon/You Won!.png');
 // Load the main menu music
   mainMenuMusic = loadSound("mainMenuMusic.mp3");
 // load help page images
