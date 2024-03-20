@@ -50,7 +50,17 @@ One issue I had faced was implementing the combat aspect of the game, both me an
 Overall, I have enjoyed the process of creating the narrative a lot, as well as coding the scoll message page, the moving character, the dagger and the tile traps; as I was able to both develop my coding skills as well as use my passion for fictional storytelling. 
 
 **Suha: Designer for items/ Coder for Items, some dialogue-**
+For this project I have taken the role as the designer and coder for items.  Firstly, I have created visually appealing items using pixel art style, by making use of the ibis Paint X software. These items include a crown, a cape and sceptre - the items essentially making up the king/the monarch, contributing towards our storyline and main theme of the game. Our initial plan was to have each of these items in their designated rooms (which would act as levels), so I ensured to communicate efficiently with my team members to create these visuals/items.
 
+In terms of coding, I have created separate classes for each item, then went on to code the movements (e.g., the cape floating on spot) and position of the items within the game/tile map - this is something Han and Allyssa both helped me with as there were some minor issues with the coordinates/positioning of the items not working at first. moreover, I have also coded/implemented a click function within the items which will essentially trigger a text box once the item has been found by the player (with time limit appearance wise).
+
+I have also taken on the responsibility of creating item dialogues to bring life and personality to each item - for example when an item is found, a popup message will appear to inform the user about the item and their progress in the game.
+
+Additionally, I also took on the role of designing/creating and coding the game over screen (I have done this by colour grading a snippet from the original tile map so that it fits the aesthetic/theme of the project), which would also have buttons embeded within it - so that once the user/player dies, the game over screen will popup/appear giving the player 2 buttons/options to choose from: one being ‘play again’ and the other being ‘back to menu’ which would essentially redirect the player to the allocated pages - Allyssa has helped me with this in terms of functionality of the buttons. This is located in the main branch under the gameover file which contains the pngs/images (background and buttons) and the sketch.js (code).
+
+Some challenges/issues I faced were not being able to implement the 2 remaining items (the sceptre and cape) in the game due to the issue with coding the next two levels of the game - so instead, I have filed away the items within my branch (Suha branch) and then committed/transferred it onto the main branch. One other issue I faced was with the game over screen not running/functioning well when merged with the main code - this was mainly due to the screen not appearing straightway when needed and not being able to link back/embed the main menu page and the game page within the buttons, one way to resolve this would potentially be to implement a collision function within the code so that as soon as the player collides with an enemy sprite and ‘dies’ the game over screen would appear - this is also something I would consider working on if I had more time to improve the game.
+
+Overall, I have thoroughly enjoyed every aspect of working on this project. The combination of designing, coding, and crafting narratives has been a engaging and fun experience, despite issues with code implementation and functions, I am also very proud to see everyone’s hard work come to fruition even if it’s reflected in one level, it still shows the dedication of the team members who worked hard together!
 
 **Anna: Designer for assets/ Coder for Story, Map Assets, some dialogue-**
 I took on the initial role of designing the decorative world assets, such as the barrels, skeletons, and banners to add depth to the environment. I then resized and loaded in all of Amelia's tilemap textures, as well as rewrote the graphicsMap to display them, some with my assets on top. I also assisted Amelia in the making of the main menu screen, including the making of the button function.
@@ -85,7 +95,8 @@ Once the player manages to get on the same tile as the crown, the player can cli
 ## A NOTE FROM US- 
 Although we initially aimed to code 3 levels where each item would be held, we unfortunately did not manage to code all three and only coded the first level due to several challenges we had encountered, such as some peoples codes not functioning; and coding the first level was too time consuming.
 
-Since we also didn't manage to get the combat aspect of the game done, the main objective of the game to do is to avoid stepping on the tile traps as well as running away from all of the enemies, in order to obtain the crown. 
+Since we also didn't manage to get the combat aspect of the game done, the main objective of the game to do is to avoid stepping on the tile traps as well as running away from all of the enemies, in order to obtain the crown. Additionally, we did not manage to make our game over screen/popup work effectively due to functionality errors as well as merging issues, we did not have a clear href to link back to and essentially not enough time to implement a collision finction to trigger the screen.
+
 
 ## AESTHETIC
 Main aestheitc/atmosphere we are aiming for: 
