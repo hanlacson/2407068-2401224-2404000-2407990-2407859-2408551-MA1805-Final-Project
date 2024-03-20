@@ -36,7 +36,7 @@ For this project I have taken the role of both coding for and making sprites for
 
 An issue i struggled with was making the enemies not collide with the wall tiles, which i failed to prevent. Additionally I had to alter the enemies spawn positions so they would not immediately kill the player, which i did sucessfully, restricting their area of spawn to the bottom rows of the map.
 
-Due to the game not having multiple maps,space was limited so there is only two enemies included in the game (we intended to have different enemies per stage) however the code for the king enemy can be found within my branch (Imogen-File).
+Due to the game not having multiple maps,space was limited so there is only two enemies included in the game (we intended to have different enemies per stage) however the code for the king enemy can be found within my branch (Imogen-File). I had also illustrated the king which we were intending to have as the final boss on the final level, but we did not manage to get to the stage of coding the other levels. 
 
 Overall i enjoyed getting to draw sprites and animating them for the game, and i found it satisfying when the code was successful. The project has helped me broaden my understanding of javascript.
 
