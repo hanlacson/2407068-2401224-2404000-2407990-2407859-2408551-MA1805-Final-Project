@@ -71,6 +71,8 @@ Most problems I had encountered and managed to resolve included the combination 
 
 Overall, I enjoyed the process of creating immersion through both the decorative assets and animation, given more time I would've liked to add depth through futher dialogue and animation to the other levels in a similar way. The project has helped me develop my passion for bringing worlds to life as well as my understanding of javascript.
 
+Note: The audio for the game worked for me but others in the group have checked this and it does not play for them. So I would just like to make a notice if the audio does not play. 
+
 **Amelia: Designer for character, tile maps/ Coder for Intro screen, story-**
 I took on several roles in bringing our game to life, each serving as a refuge during a challenging time in my life. As the creator of the main pixel art, I found solace in meticulously crafting each visual element. Over the time period, I struggled with mental health, but immersing myself in the intricate details of pixel art allowed me to momentarily escape from those challenges. Through the process of bringing characters and environments to life, I discovered a therapeutic outlet that enabled me to find moments of peace and focus amidst the chaos.
 In addition, coding the menu buttons provided a tangible way to channel my energy and distract myself from the struggles I faced. By focusing on the technical intricacies of navigation systems and user interfaces, I could temporarily set aside my own worries and immerse myself in the world of game development.
