@@ -255,9 +255,9 @@ function preload() {
   // Load the custom font
   endCustomFont = loadFont('assets/MinecraftRegular-Bmg3.otf');
   // Load the background image
-  endBackgroundImage = loadImage('throne room.png');
+  endBackgroundImage = loadImage('YouWon/throne room.png');
   // Load the popup image
-  popupImage = loadImage('You Won!.png');
+  popupImage = loadImage('YouWon/You Won!.png');
 // Load the main menu music
   mainMenuMusic = loadSound("mainMenuMusic.mp3");
 // load help page images
@@ -377,10 +377,10 @@ function mouseClicked() {
             gameState = "text"; // Transition to text state
         } 
         if(inHelpButton){
-            gameState = "help";
+            gameState = "help"; // Transition to help state
         }
         if(inExitButton){
-            window.close();
+            window.close(); // Close the window
         }
         
 
@@ -392,11 +392,11 @@ function mouseClicked() {
             gameState = "cutscene"; // Transition to play state after text finishes scrolling
             
         } else if (gameState === "cutscene") {
-            if (inDialogue) {
-                if (hasFinished){
-                    character = 0;
-                    dialogueNum++;
-                    dialogue(goblinDialogue[dialogueNum])
+            if (inDialogue) { 
+                if (hasFinished){ //if the dialogue has finished, move onto the next dialogue
+                    character = 0; //resets the character count to 0
+                    dialogueNum++; 
+                    dialogue(goblinDialogue[dialogueNum]) 
                 }
              }
         } else if (gameState === "cutscene") { //transition to win when the crown is clicked on
@@ -410,9 +410,12 @@ function mouseClicked() {
 
         
 function drawHelpPage() {
+    // Draw the background image for the start screen
     image(startScreenImage, 0, 0, width, height);
+    //Display the keybinds and the return to menu button
     image(keybinds, 75, 120, 450, 450);
     image(returnToMenuButton, returnToMenuButtonX, buttonY, 120, 120);
+    // Check if the mouse is over the return to menu button
     buttonDistance = dist(returnToMenuButtonX + buttonCentre, buttonY + buttonCentre, mouseX, mouseY); // calculate the distance between centre of button and the mouse
     if (buttonDistance <= 50){   
         inReturnToMenuButton = true;
@@ -426,8 +429,9 @@ function drawStartPage() {
     // Draw the background image for the start screen
     image(startScreenImage, 0, 0, width, height);
 
-    // Set text properties
+    // Draw the title
     image(Title, 70, 20, 500, 200);
+
         // PLAY BUTTON
         displayButton(playButton, playButtonX, buttonY, buttonSizeX, buttonSizeY, playText, playButtonX + 25, buttonY + 40, buttonHighlight, inPlayButton);
         displayButton(helpButton, helpButtonX, buttonY, buttonSizeX, buttonSizeY, helpText, helpButtonX + 25, buttonY + 40, buttonHighlight, inHelpButton);
@@ -494,8 +498,9 @@ function drawGame() {
     }
 
 function drawCutscene() {
-    if(isCutscene){
+    if(isCutscene){ //the door will open & close and the goblin will initiate dialogue
         inDialogue = false;
+
 
         for (let across = 0; across < numAcross; across++) {
             for (let down = 0; down < numDown; down++) {
@@ -503,15 +508,16 @@ function drawCutscene() {
                 tilemap[across][down].debug();
             }
         }
-    
+        // after a certain amount of time, draw the door opening
         setTimeout(drawOpenDoor, 1000);
     
         if(isDoorOpen == true){
-            setTimeout(player.display(), 4000);
-            setTimeout(drawClosedDoor, 1000);
-            setTimeout(inDialogue = true, 10000);
+            setTimeout(player.display(), 4000); // the play appearing alongside the opened door
+            setTimeout(drawClosedDoor, 1000); // and then the door closing
+            setTimeout(inDialogue = true, 10000); // then initiate dialogue
         }
     
+        // run the dialogue
         if(inDialogue){
             if (dialogueNum < goblinDialogue.length) {
                 dialogue(goblinDialogue[dialogueNum], "Goblin");
@@ -540,7 +546,7 @@ function drawGraphicsMap(graphicsMap){
     }
 }
 
-function drawOpenDoor() {
+function drawOpenDoor() { //replaces the graphics map to show the open door
     isDoorOpen = true;
     
     let graphicsMapOpen = [
@@ -559,7 +565,7 @@ function drawOpenDoor() {
     drawGraphicsMap(graphicsMapOpen);
 }
 
-function drawClosedDoor() {
+function drawClosedDoor() { //replaces the graphics map to show the closed door
     let graphicsMapClosed = [
         [16, 17, 39, 17, 33, 34, 17, 39, 17, 18, ],
         [19, 20, 40, 20, 35, 36, 20, 40, 20, 21, ],
@@ -578,6 +584,7 @@ function drawClosedDoor() {
 function dialogue(string, name) { // shows the inputted string letter by letter inside the dialogue box.
     inDialogue = true
     image(dialogueBox, 0, 0, 600, 600);
+    // uses substring to show letter by letter
     let substring = string.substring(0, character);
 
     fill(255);
@@ -599,9 +606,9 @@ function dialogue(string, name) { // shows the inputted string letter by letter 
 
 function displayButton(buttonType, x, y, buttonSizeX, buttonSizeY, buttonText, textX, textY, buttonHighlight, inButton) {
     image(buttonType, x, y, buttonSizeX, buttonSizeY);
-    
+ 
     buttonDistance = dist(x + buttonCentre, y + buttonCentre, mouseX, mouseY); // calculate the distance between centre of button and the mouse
-    if (buttonDistance <= 50){   
+    if (buttonDistance <= 50){   // if the distance is less than 50, the mouse is over the button
         
         if(buttonType == playButton){
             inPlayButton = true;
@@ -628,9 +635,9 @@ function displayButton(buttonType, x, y, buttonSizeX, buttonSizeY, buttonText, t
             inReturnToMenuButton = false;
         }
 
-        image(buttonHighlight, x, y, buttonSizeX, buttonSizeY);
+        image(buttonHighlight, x, y, buttonSizeX, buttonSizeY); // if the mouse is over the button, draw the highlighted button
     }
-    image(buttonText, textX, textY, 90, 50);
+    image(buttonText, textX, textY, 90, 50); // draw the text on the button
 }
 
 function drawEndScrollPage() {
