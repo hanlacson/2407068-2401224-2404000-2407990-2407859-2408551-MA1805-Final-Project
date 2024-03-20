@@ -97,6 +97,9 @@ let playButtonDistance;
 let inPlayButton = false; 
 
 // HELP BUTTON VARIABLES
+let returnToMenuButton;
+returnToMenuButtonX = 235;
+let inReturnToMenuButton = false;
 let helpText;
 let helpButton; 
 let helpButtonX = 235;
@@ -257,6 +260,9 @@ function preload() {
   popupImage = loadImage('You Won!.png');
 // Load the main menu music
   mainMenuMusic = loadSound("mainMenuMusic.mp3");
+// load help page images
+    returnToMenuButton = loadImage("assets/returnToMenuButton.png");
+    keybinds = loadImage("assets/keybinds.png");   
 }
 
 function setup() {
@@ -329,6 +335,8 @@ function draw() {
         drawCutscene();
     } else if (gameState === "win") {
         drawEndScrollPage();
+    } else if (gameState === "help") {
+        drawHelpPage();
     }
 }
 
@@ -368,8 +376,19 @@ function mouseClicked() {
         if(inPlayButton){
             gameState = "text"; // Transition to text state
         } 
+        if(inHelpButton){
+            gameState = "help";
+        }
+        if(inExitButton){
+            window.close();
+        }
+        
 
-        } else if (gameState === "text") {
+        } else if (gameState === "help") {
+            if (inReturnToMenuButton){
+                gameState = "start";
+            }
+        }else if (gameState === "text") {
             gameState = "cutscene"; // Transition to play state after text finishes scrolling
             
         } else if (gameState === "cutscene") {
@@ -382,13 +401,27 @@ function mouseClicked() {
              }
         } else if (gameState === "cutscene") { //transition to win when the crown is clicked on
             gameState = "win";
-        }
+        } 
         if (isInsideTriangle(mouseX, mouseY, crownSprite.x, crownSprite.y, crownSprite.size)){ // get to and click on the crown to win
             gameState = "win";
 
           }
         }
 
+        
+function drawHelpPage() {
+    image(startScreenImage, 0, 0, width, height);
+    image(keybinds, 75, 120, 450, 450);
+    image(returnToMenuButton, returnToMenuButtonX, buttonY, 120, 120);
+    buttonDistance = dist(returnToMenuButtonX + buttonCentre, buttonY + buttonCentre, mouseX, mouseY); // calculate the distance between centre of button and the mouse
+    if (buttonDistance <= 50){   
+        inReturnToMenuButton = true;
+    }else{
+        inReturnToMenuButton = false;
+    
+    }
+    
+}
 function drawStartPage() {
     // Draw the background image for the start screen
     image(startScreenImage, 0, 0, width, height);
@@ -587,6 +620,12 @@ function displayButton(buttonType, x, y, buttonSizeX, buttonSizeY, buttonText, t
             inExitButton = true;
         }else{
             inExitButton = false;
+        }
+
+        if(buttonType == returnToMenuButton){
+            inReturnToMenuButton = true;
+        }else{
+            inReturnToMenuButton = false;
         }
 
         image(buttonHighlight, x, y, buttonSizeX, buttonSizeY);
