@@ -1,7 +1,7 @@
 let tilemap = [];
 let tileSize = 50;
 let textures = [];
-let currentLevel = dungeonObject;
+let currentLevel;
 
 const dungeonObject = {
     numAcross: 10,
@@ -35,6 +35,8 @@ const dungeonObject = {
         [1, 1, 1, 1, 0, 0, 1, 1, 1, 1] 
     ]
 }
+
+currentLevel = dungeonObject;
 
 const mainHallObject = {
     numAcross: 10,
