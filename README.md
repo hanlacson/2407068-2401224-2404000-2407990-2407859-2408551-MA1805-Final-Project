@@ -92,13 +92,13 @@ The player will be able to use the WASD keys to move the character around; and s
 
 Once the player manages to get on the same tile as the crown, the player can click on the crown and they would immediatley be taken to the winnner screen. 
 
+## AESTHETIC
+Main aestheitc/atmosphere we are aiming for: 
+
+![alt text](6f6aba4c807b10ab27570b107770467f.jpg)![alt text](7645480e38e89d7ac0f628dd58a90df2.jpg)![alt text](c4b7c016e4fd3f1addbb42f500652b15.jpg)![alt text](663095e4edd081ec75a959e4155a0d35.jpg) 
+
 ## A NOTE FROM US- 
 Although we initially aimed to code 3 levels where each item would be held, we unfortunately did not manage to code all three and only coded the first level due to several challenges we had encountered, such as some peoples codes not functioning; and coding the first level was too time consuming.
 
 Since we also didn't manage to get the combat aspect of the game done, the main objective of the game to do is to avoid stepping on the tile traps as well as running away from all of the enemies, in order to obtain the crown. Additionally, we did not manage to make our game over screen/popup work effectively due to functionality errors as well as merging issues, we did not have a clear href to link back to and essentially not enough time to implement a collision finction to trigger the screen.
 
-
-## AESTHETIC
-Main aestheitc/atmosphere we are aiming for: 
-
-![alt text](6f6aba4c807b10ab27570b107770467f.jpg)![alt text](7645480e38e89d7ac0f628dd58a90df2.jpg)![alt text](c4b7c016e4fd3f1addbb42f500652b15.jpg)![alt text](663095e4edd081ec75a959e4155a0d35.jpg) 
